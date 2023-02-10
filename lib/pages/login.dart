@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
           children: <Widget>[
             Image.asset('assets/images/logo.png'),
             const SizedBox(
-              height: 50,
+              height: 20,
             ),
             const Text("LOGIN", style: TextStyle(
                 fontSize: 25, color: Colors.purpleAccent, fontFamily: 'OpenSans'),
