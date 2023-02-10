@@ -12,6 +12,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   var emailTxt = TextEditingController();
   var passTxt = TextEditingController();
+  var confirmPassTxt = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class _RegisterState extends State<Register> {
           children: <Widget>[
             Image.asset('assets/images/logo.png'),
             const SizedBox(
-              height: 50,
+              height: 20,
             ),
             const Text("REGISTER", style: TextStyle(
                 fontSize: 25, color: Colors.purpleAccent),
@@ -65,6 +66,25 @@ class _RegisterState extends State<Register> {
               ),
             ),
             const SizedBox(
+              height: 30,
+            ),
+            SizedBox(
+              width: 350,
+              child: TextField(
+                controller: confirmPassTxt,
+                obscureText: true,
+                decoration: InputDecoration(
+                    prefixIcon: const Icon(
+                        Icons.password_rounded
+                    ),
+                    hintText: "Confirm Password",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25)
+                    )
+                ),
+              ),
+            ),
+            const SizedBox(
               height: 35,
             ),
             SizedBox(
@@ -73,6 +93,11 @@ class _RegisterState extends State<Register> {
               child: ElevatedButton(onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
               },
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)
+                    )),
+                  ),
                   child: const Text("REGISTER")),
             ),
             const SizedBox(
