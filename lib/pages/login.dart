@@ -90,14 +90,14 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Don't have an account? ", style: TextStyle(
-                    fontSize: 18, fontFamily: 'OpenSans'),
+                    fontSize: 20, fontFamily: 'OpenSans'),
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Register()));
                   },
                   child: const Text("Register", style: TextStyle(
-                      fontSize: 18, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
+                      fontSize: 21, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
                   ),
                 )
               ],

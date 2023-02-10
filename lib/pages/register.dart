@@ -110,14 +110,14 @@ class _RegisterState extends State<Register> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Already have an account? ", style: TextStyle(
-                    fontSize: 18, fontFamily: 'OpenSans'),
+                    fontSize: 20, fontFamily: 'OpenSans'),
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
                   },
                   child: const Text("Login", style: TextStyle(
-                      fontSize: 18, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
+                      fontSize: 21, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
                   ),
                 )
               ],
