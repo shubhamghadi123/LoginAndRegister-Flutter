@@ -25,7 +25,7 @@ class _LoginState extends State<Login> {
               height: 50,
             ),
             const Text("LOGIN", style: TextStyle(
-                fontSize: 25, color: Colors.purpleAccent),
+                fontSize: 25, color: Colors.purpleAccent, fontFamily: 'OpenSans'),
             ),
             const SizedBox(
               height: 30,
@@ -78,7 +78,10 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.circular(15)
                     )),
                   ),
-                  child: const Text("LOGIN")),
+                  child: const Text("LOGIN", style: TextStyle(
+                    fontSize: 18, fontFamily: 'OpenSans'),
+                  ),
+              ),
             ),
             const SizedBox(
               height: 40,
@@ -87,14 +90,14 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Don't have an account? ", style: TextStyle(
-                    fontSize: 18),
+                    fontSize: 18, fontFamily: 'OpenSans'),
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Register()));
                   },
                   child: const Text("Register", style: TextStyle(
-                      fontSize: 18, color: Colors.deepOrangeAccent),
+                      fontSize: 18, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
                   ),
                 )
               ],

@@ -26,7 +26,7 @@ class _RegisterState extends State<Register> {
               height: 20,
             ),
             const Text("REGISTER", style: TextStyle(
-                fontSize: 25, color: Colors.purpleAccent),
+                fontSize: 25, color: Colors.purpleAccent, fontFamily: 'OpenSans'),
             ),
             const SizedBox(
               height: 30,
@@ -98,7 +98,10 @@ class _RegisterState extends State<Register> {
                         borderRadius: BorderRadius.circular(15)
                     )),
                   ),
-                  child: const Text("REGISTER")),
+                  child: const Text("REGISTER", style: TextStyle(
+                    fontSize: 18, fontFamily: 'OpenSans'),
+                  ),
+              ),
             ),
             const SizedBox(
               height: 40,
@@ -107,14 +110,14 @@ class _RegisterState extends State<Register> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Already have an account? ", style: TextStyle(
-                    fontSize: 18),
+                    fontSize: 18, fontFamily: 'OpenSans'),
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
                   },
                   child: const Text("Login", style: TextStyle(
-                      fontSize: 18, color: Colors.deepOrangeAccent),
+                      fontSize: 18, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
                   ),
                 )
               ],
