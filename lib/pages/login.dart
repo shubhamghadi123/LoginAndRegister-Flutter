@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginandregister/pages/forgot_password.dart';
 import 'package:loginandregister/pages/home.dart';
 import 'package:loginandregister/pages/register.dart';
 
@@ -65,7 +66,26 @@ class _LoginState extends State<Login> {
               ),
             ),
             const SizedBox(
-              height: 35,
+              height: 10,
+            ),
+            SizedBox(
+              width: 310,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const FgPwd()));
+                    },
+                    child: const Text("Forgot Password?", style: TextStyle(
+                        fontSize: 15, color: Colors.deepPurple, fontFamily: 'OpenSans'),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             SizedBox(
               width: 350,
