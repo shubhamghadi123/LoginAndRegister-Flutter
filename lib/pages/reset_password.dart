@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:loginandregister/pages/reset_password.dart';
+import 'package:loginandregister/pages/login.dart';
 
-class FgPwd extends StatefulWidget {
-  const FgPwd({Key? key}) : super(key: key);
+class ResetPwd extends StatefulWidget {
+  const ResetPwd({Key? key}) : super(key: key);
 
   @override
-  State<FgPwd> createState() => _FgPwdState();
+  State<ResetPwd> createState() => _ResetPwdState();
 }
 
-class _FgPwdState extends State<FgPwd> {
+class _ResetPwdState extends State<ResetPwd> {
 
-  var emailTxt = TextEditingController();
+  var newpassTxt = TextEditingController();
+  var newconfirmPassTxt = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +33,32 @@ class _FgPwdState extends State<FgPwd> {
             SizedBox(
               width: 350,
               child: TextField(
-                controller: emailTxt,
+                controller: newpassTxt,
+                obscureText: true,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(
-                        Icons.email_rounded
+                        Icons.password_rounded
                     ),
-                    hintText: "Email ID",
+                    hintText: "New Password",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25)
+                    )
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            SizedBox(
+              width: 350,
+              child: TextField(
+                controller: newconfirmPassTxt,
+                obscureText: true,
+                decoration: InputDecoration(
+                    prefixIcon: const Icon(
+                        Icons.password_rounded
+                    ),
+                    hintText: "Confirm Password",
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25)
                     )
@@ -51,7 +72,7 @@ class _FgPwdState extends State<FgPwd> {
               width: 350,
               height: 45,
               child: ElevatedButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const ResetPwd()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
               },
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
