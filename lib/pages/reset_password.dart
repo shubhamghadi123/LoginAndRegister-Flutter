@@ -10,8 +10,8 @@ class ResetPwd extends StatefulWidget {
 
 class _ResetPwdState extends State<ResetPwd> {
 
-  var newpassTxt = TextEditingController();
-  var newconfirmPassTxt = TextEditingController();
+  var newPassTxt = TextEditingController();
+  var newConfirmPassTxt = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _ResetPwdState extends State<ResetPwd> {
             SizedBox(
               width: 350,
               child: TextField(
-                controller: newpassTxt,
+                controller: newPassTxt,
                 obscureText: true,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(
@@ -52,7 +52,7 @@ class _ResetPwdState extends State<ResetPwd> {
             SizedBox(
               width: 350,
               child: TextField(
-                controller: newconfirmPassTxt,
+                controller: newConfirmPassTxt,
                 obscureText: true,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(
