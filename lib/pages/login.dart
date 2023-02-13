@@ -110,24 +110,24 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Don't have an account? ", style: TextStyle(
-                    fontSize: 20, fontFamily: 'OpenSans'),
+                    fontSize: 16, fontFamily: 'OpenSans'),
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Register()));
                   },
                   child: const Text("Register", style: TextStyle(
-                      fontSize: 21, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
+                      fontSize: 17, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
                   ),
                 ),
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             const Text("Or"),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             SizedBox(
               width: 350,
