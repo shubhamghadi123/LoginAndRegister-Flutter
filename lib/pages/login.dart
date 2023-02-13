@@ -104,7 +104,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -119,8 +119,37 @@ class _LoginState extends State<Login> {
                   child: const Text("Register", style: TextStyle(
                       fontSize: 21, color: Colors.deepOrangeAccent, fontFamily: 'OpenSans'),
                   ),
-                )
+                ),
               ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text("Or"),
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              width: 350,
+              height: 45,
+              child: ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+              },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.pressed)) {
+                      return Colors.redAccent;
+                    }
+                    return Colors.white;
+                  }),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                  )),
+                ),
+                child: const Text("SIGN-IN WITH GOOGLE", style: TextStyle(
+                    fontSize: 15, fontFamily: 'OpenSans', color: Colors.black),
+                ),
+              ),
             ),
           ],
         ),
