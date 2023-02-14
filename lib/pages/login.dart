@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
                 fontSize: 25, color: Colors.purpleAccent, fontFamily: 'OpenSans'),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             SizedBox(
               width: 350,
@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             SizedBox(
               width: 350,
@@ -94,12 +94,18 @@ class _LoginState extends State<Login> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
               },
                   style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.blueAccent;
+                      }
+                      return Colors.indigoAccent;
+                    }),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)
                     )),
                   ),
                   child: const Text("LOGIN", style: TextStyle(
-                    fontSize: 18, fontFamily: 'OpenSans'),
+                    fontSize: 18, fontFamily: 'OpenSans', color: Colors.white),
                   ),
               ),
             ),
@@ -140,7 +146,7 @@ class _LoginState extends State<Login> {
                     if (states.contains(MaterialState.pressed)) {
                       return Colors.redAccent;
                     }
-                    return Colors.white;
+                    return Colors.white30;
                   }),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)

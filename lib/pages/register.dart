@@ -29,7 +29,7 @@ class _RegisterState extends State<Register> {
                 fontSize: 25, color: Colors.purpleAccent, fontFamily: 'OpenSans'),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             SizedBox(
               width: 350,
@@ -47,7 +47,7 @@ class _RegisterState extends State<Register> {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 15,
             ),
             SizedBox(
               width: 350,
@@ -66,7 +66,7 @@ class _RegisterState extends State<Register> {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 15,
             ),
             SizedBox(
               width: 350,
@@ -85,7 +85,7 @@ class _RegisterState extends State<Register> {
               ),
             ),
             const SizedBox(
-              height: 35,
+              height: 15,
             ),
             SizedBox(
               width: 350,
@@ -94,12 +94,18 @@ class _RegisterState extends State<Register> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
               },
                   style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.blueAccent;
+                      }
+                      return Colors.indigoAccent;
+                    }),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)
                     )),
                   ),
                   child: const Text("REGISTER", style: TextStyle(
-                    fontSize: 18, fontFamily: 'OpenSans'),
+                    fontSize: 18, fontFamily: 'OpenSans', color: Colors.white),
                   ),
               ),
             ),
@@ -140,7 +146,7 @@ class _RegisterState extends State<Register> {
                     if (states.contains(MaterialState.pressed)) {
                       return Colors.redAccent;
                     }
-                    return Colors.white;
+                    return Colors.white30;
                   }),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)
