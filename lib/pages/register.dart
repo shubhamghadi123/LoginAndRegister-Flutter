@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:loginandregister/pages/home.dart';
 import 'package:loginandregister/pages/login.dart';
 
@@ -91,7 +92,12 @@ class _RegisterState extends State<Register> {
               width: 350,
               height: 45,
               child: ElevatedButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+                if (passTxt.text!=confirmPassTxt.text){
+                  Fluttertoast.showToast(msg: "Password did not match");
+                }
+                else {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+                }
               },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.resolveWith((states) {
