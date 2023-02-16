@@ -1,16 +1,13 @@
-# loginandregister
+# Login and Register Page with Flutter
 
-A new Flutter project.
+Contains Login and Register page for Android and IOS devices
 
-## Getting Started
+## Requirements
+* Android Studio or VS Code (with Dart and Flutter Plugin)
+* Flutter SDK
+* Emulator or Smart Phone
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Steps to install
+* Download the repo
+* Open project from AndroidStudio or VS Code
+* Run the project
