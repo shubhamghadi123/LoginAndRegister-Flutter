@@ -14,6 +14,8 @@ class _LoginState extends State<Login> {
   var emailTxt = TextEditingController();
   var passTxt = TextEditingController();
 
+  bool _obscureTextPass = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,10 +55,17 @@ class _LoginState extends State<Login> {
               width: 350,
               child: TextField(
                 controller: passTxt,
-                obscureText: true,
+                obscureText: _obscureTextPass,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(
                         Icons.password_rounded
+                    ),
+                    suffixIcon: GestureDetector(onTap: () {
+                      setState(() {
+                        _obscureTextPass = !_obscureTextPass;
+                      });
+                    },
+                      child: Icon(_obscureTextPass ?Icons.visibility_rounded :Icons.visibility_off_rounded),
                     ),
                     hintText: "Password",
                     border: OutlineInputBorder(

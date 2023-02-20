@@ -15,6 +15,9 @@ class _RegisterState extends State<Register> {
   var passTxt = TextEditingController();
   var confirmPassTxt = TextEditingController();
 
+  bool _obscureTextPass = true;
+  bool _obscureTextCinfirmPass = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,10 +57,17 @@ class _RegisterState extends State<Register> {
               width: 350,
               child: TextField(
                 controller: passTxt,
-                obscureText: true,
+                obscureText: _obscureTextPass,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(
                         Icons.password_rounded
+                    ),
+                    suffixIcon: GestureDetector(onTap: () {
+                      setState(() {
+                        _obscureTextPass = !_obscureTextPass;
+                      });
+                    },
+                    child: Icon(_obscureTextPass ?Icons.visibility_rounded :Icons.visibility_off_rounded),
                     ),
                     hintText: "Password",
                     border: OutlineInputBorder(
@@ -73,10 +83,17 @@ class _RegisterState extends State<Register> {
               width: 350,
               child: TextField(
                 controller: confirmPassTxt,
-                obscureText: true,
+                obscureText: _obscureTextCinfirmPass,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(
                         Icons.password_rounded
+                    ),
+                    suffixIcon: GestureDetector(onTap: () {
+                      setState(() {
+                        _obscureTextCinfirmPass = !_obscureTextCinfirmPass;
+                      });
+                    },
+                      child: Icon(_obscureTextCinfirmPass ?Icons.visibility_rounded :Icons.visibility_off_rounded),
                     ),
                     hintText: "Confirm Password",
                     border: OutlineInputBorder(
