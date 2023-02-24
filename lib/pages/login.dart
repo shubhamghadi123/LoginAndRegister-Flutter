@@ -166,6 +166,31 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 15,
+            ),
+            SizedBox(
+              width: 350,
+              height: 45,
+              child: ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+              },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.pressed)) {
+                      return Colors.greenAccent;
+                    }
+                    return Colors.white30;
+                  }),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                  )),
+                ),
+                child: const Text("SIGN-IN WITH FACEBOOK", style: TextStyle(
+                    fontSize: 15, fontFamily: 'OpenSans', color: Colors.black),
+                ),
+              ),
+            ),
           ],
         ),
       ),
