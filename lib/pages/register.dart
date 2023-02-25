@@ -158,52 +158,57 @@ class _RegisterState extends State<Register> {
             const SizedBox(
               height: 10,
             ),
-            SizedBox(
-              width: 350,
-              height: 45,
-              child: ElevatedButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
-              },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.resolveWith((states) {
-                    if (states.contains(MaterialState.pressed)) {
-                      return Colors.redAccent;
-                    }
-                    return Colors.white30;
-                  }),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)
-                  )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  height: 45,
+                  child: ElevatedButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+                  },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith((states) {
+                        if (states.contains(MaterialState.pressed)) {
+                          return Colors.redAccent;
+                        }
+                        return Colors.red.shade400;
+                      }),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                      )),
+                    ),
+                    child: const Text("GOOGLE", style: TextStyle(
+                        fontSize: 15, fontFamily: 'OpenSans', color: Colors.white),
+                    ),
+                  ),
                 ),
-                child: const Text("SIGN-UP WITH GOOGLE", style: TextStyle(
-                    fontSize: 15, fontFamily: 'OpenSans', color: Colors.black),
+                const SizedBox(
+                  width: 10,
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            SizedBox(
-              width: 350,
-              height: 45,
-              child: ElevatedButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
-              },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.resolveWith((states) {
-                    if (states.contains(MaterialState.pressed)) {
-                      return Colors.greenAccent;
-                    }
-                    return Colors.white30;
-                  }),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)
-                  )),
+                SizedBox(
+                  width: 170,
+                  height: 45,
+                  child: ElevatedButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+                  },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith((states) {
+                        if (states.contains(MaterialState.pressed)) {
+                          return Colors.greenAccent;
+                        }
+                        return Colors.green.shade400;
+                      }),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                      )),
+                    ),
+                    child: const Text("FACEBOOK", style: TextStyle(
+                        fontSize: 15, fontFamily: 'OpenSans', color: Colors.white),
+                    ),
+                  ),
                 ),
-                child: const Text("SIGN-UP WITH FACEBOOK", style: TextStyle(
-                    fontSize: 15, fontFamily: 'OpenSans', color: Colors.black),
-                ),
-              ),
+              ],
             ),
           ],
         ),
