@@ -165,7 +165,7 @@ class _LoginState extends State<Login> {
                     )),
                   ),
                   child: const Text("GOOGLE", style: TextStyle(
-                      fontSize: 15, fontFamily: 'OpenSans', color: Colors.black),
+                      fontSize: 15, fontFamily: 'OpenSans', color: Colors.white),
                   ),
                 ),
               ),
@@ -190,7 +190,7 @@ class _LoginState extends State<Login> {
                     )),
                   ),
                   child: const Text("FACEBOOK", style: TextStyle(
-                      fontSize: 15, fontFamily: 'OpenSans', color: Colors.black),
+                      fontSize: 15, fontFamily: 'OpenSans', color: Colors.white),
                   ),
                 ),
               ),
