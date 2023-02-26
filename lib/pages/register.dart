@@ -16,7 +16,7 @@ class _RegisterState extends State<Register> {
   var confirmPassTxt = TextEditingController();
 
   bool _obscureTextPass = true;
-  bool _obscureTextCinfirmPass = true;
+  bool _obscureTextConfirmPass = true;
 
   @override
   Widget build(BuildContext context) {
@@ -83,17 +83,17 @@ class _RegisterState extends State<Register> {
               width: 350,
               child: TextField(
                 controller: confirmPassTxt,
-                obscureText: _obscureTextCinfirmPass,
+                obscureText: _obscureTextConfirmPass,
                 decoration: InputDecoration(
                     prefixIcon: const Icon(
                         Icons.password_rounded
                     ),
                     suffixIcon: GestureDetector(onTap: () {
                       setState(() {
-                        _obscureTextCinfirmPass = !_obscureTextCinfirmPass;
+                        _obscureTextConfirmPass = !_obscureTextConfirmPass;
                       });
                     },
-                      child: Icon(_obscureTextCinfirmPass ?Icons.visibility_rounded :Icons.visibility_off_rounded),
+                      child: Icon(_obscureTextConfirmPass ?Icons.visibility_rounded :Icons.visibility_off_rounded),
                     ),
                     hintText: "Confirm Password",
                     border: OutlineInputBorder(
