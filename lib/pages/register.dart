@@ -152,11 +152,11 @@ class _RegisterState extends State<Register> {
               ],
             ),
             const SizedBox(
-              height: 10,
+              height: 13,
             ),
             const Text("Or"),
             const SizedBox(
-              height: 10,
+              height: 13,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -172,12 +172,9 @@ class _RegisterState extends State<Register> {
                       child:
                       Image.asset(
                           "assets/images/google_logo.png",
-                          fit:BoxFit.cover
+                        height: 30,
                       )
                   ),
-                ),
-                const SizedBox(
-                  width: 10,
                 ),
                 SizedBox(
                   height: 40,
@@ -190,12 +187,9 @@ class _RegisterState extends State<Register> {
                       child:
                       Image.asset(
                           "assets/images/facebook_logo.png",
-                          fit:BoxFit.cover
+                        height: 30,
                       )
                   ),
-                ),
-                const SizedBox(
-                  width: 10,
                 ),
                 SizedBox(
                   height: 40,
@@ -207,8 +201,8 @@ class _RegisterState extends State<Register> {
                       ),
                       child:
                       Image.asset(
-                          "assets/images/facebook_logo.png",
-                          fit:BoxFit.cover
+                          "assets/images/twitter_logo.png",
+                        height: 25,
                       )
                   ),
                 ),
