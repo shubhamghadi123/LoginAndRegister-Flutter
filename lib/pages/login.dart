@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
               height: 20,
             ),
             const Text("LOGIN", style: TextStyle(
-                fontSize: 25, color: Colors.purpleAccent, fontFamily: 'OpenSans'),
+                fontSize: 25, color: Colors.indigoAccent, fontFamily: 'OpenSans'),
             ),
             const SizedBox(
               height: 20,

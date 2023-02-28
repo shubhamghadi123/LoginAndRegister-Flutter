@@ -30,7 +30,7 @@ class _RegisterState extends State<Register> {
               height: 20,
             ),
             const Text("REGISTER", style: TextStyle(
-                fontSize: 25, color: Colors.purpleAccent, fontFamily: 'OpenSans'),
+                fontSize: 25, color: Colors.indigoAccent, fontFamily: 'OpenSans'),
             ),
             const SizedBox(
               height: 20,
@@ -162,50 +162,54 @@ class _RegisterState extends State<Register> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 170,
-                  height: 45,
-                  child: ElevatedButton(onPressed: () {
+                  height: 40,
+                  child: OutlinedButton(onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
                   },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.resolveWith((states) {
-                        if (states.contains(MaterialState.pressed)) {
-                          return Colors.redAccent;
-                        }
-                        return Colors.red.shade400;
-                      }),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)
-                      )),
+                    style: OutlinedButton.styleFrom(
+                      shape: const CircleBorder(),
                     ),
-                    child: const Text("GOOGLE", style: TextStyle(
-                        fontSize: 15, fontFamily: 'OpenSans', color: Colors.white),
-                    ),
+                      child:
+                      Image.asset(
+                          "assets/images/google_logo.png",
+                          fit:BoxFit.cover
+                      )
                   ),
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 SizedBox(
-                  width: 170,
-                  height: 45,
-                  child: ElevatedButton(onPressed: () {
+                  height: 40,
+                  child: OutlinedButton(onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
                   },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.resolveWith((states) {
-                        if (states.contains(MaterialState.pressed)) {
-                          return Colors.greenAccent;
-                        }
-                        return Colors.green.shade400;
-                      }),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)
-                      )),
-                    ),
-                    child: const Text("FACEBOOK", style: TextStyle(
-                        fontSize: 15, fontFamily: 'OpenSans', color: Colors.white),
-                    ),
+                      style: OutlinedButton.styleFrom(
+                        shape: const CircleBorder(),
+                      ),
+                      child:
+                      Image.asset(
+                          "assets/images/facebook_logo.png",
+                          fit:BoxFit.cover
+                      )
+                  ),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                SizedBox(
+                  height: 40,
+                  child: OutlinedButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+                  },
+                      style: OutlinedButton.styleFrom(
+                        shape: const CircleBorder(),
+                      ),
+                      child:
+                      Image.asset(
+                          "assets/images/facebook_logo.png",
+                          fit:BoxFit.cover
+                      )
                   ),
                 ),
               ],
