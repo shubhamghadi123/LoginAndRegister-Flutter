@@ -12,6 +12,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Login And Register App",
+          style: TextStyle(
+            color: Colors.black),
+        ),
+        backgroundColor: Colors.grey,
+      ),
       body: Center(
         child: SizedBox(
           width: 150,
