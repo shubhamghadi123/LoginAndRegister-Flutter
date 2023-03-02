@@ -173,6 +173,7 @@ class _RegisterState extends State<Register> {
                       Image.asset(
                           "assets/images/google_logo.png",
                         height: 30,
+                        width: 25,
                       )
                   ),
                 ),
@@ -187,7 +188,7 @@ class _RegisterState extends State<Register> {
                       child:
                       Image.asset(
                           "assets/images/facebook_logo.png",
-                        height: 30,
+                        height: 25,
                       )
                   ),
                 ),
@@ -203,6 +204,7 @@ class _RegisterState extends State<Register> {
                       Image.asset(
                           "assets/images/twitter_logo.png",
                         height: 25,
+                        width: 25,
                       )
                   ),
                 ),
