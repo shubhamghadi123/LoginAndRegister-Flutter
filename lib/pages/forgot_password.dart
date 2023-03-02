@@ -58,7 +58,7 @@ class _FgPwdState extends State<FgPwd> {
                       borderRadius: BorderRadius.circular(15)
                   )),
                 ),
-                child: const Text("SUBMIT", style: TextStyle(
+                child: const Text("NEXT", style: TextStyle(
                     fontSize: 18, fontFamily: 'OpenSans'),
                 ),
               ),
