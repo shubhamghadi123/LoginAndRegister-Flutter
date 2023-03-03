@@ -19,5 +19,5 @@ Contains Login and Register page for Android and iOS devices
 
 ## Screenshots
 
-<img src="https://github.com/shubhamghadi123/LoginAndRegister-Flutter/blob/master/assets/Screenshots/login.png" width="35%"> <img src="https://github.com/shubhamghadi123/LoginAndRegister-Flutter/blob/master/assets/Screenshots/register.png" width="35%">
-<img src="https://github.com/shubhamghadi123/LoginAndRegister-Flutter/blob/master/assets/Screenshots/home.png" width="35%">
+<img src="https://github.com/shubhamghadi123/LoginAndRegister-Flutter/blob/master/assets/screenshots/login.png" width="35%"> <img src="https://github.com/shubhamghadi123/LoginAndRegister-Flutter/blob/master/assets/screenshots/register.png" width="35%">
+<img src="https://github.com/shubhamghadi123/LoginAndRegister-Flutter/blob/master/assets/screenshots/home.png" width="35%">
